@@ -22,7 +22,7 @@ public class TestCtrl {
     {
         for (int i = 0; i < 100; i++)
         {
-            producer.produceMessage("sexy girl - " + i);
+            producer.sendMessageTopic1("sexy girl - " + i);
         }
     }
 }

@@ -9,13 +9,20 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class Producer {
-    @Value("${funny.kafka.topic}")
-    private String topicName;
+    @Value("${funny.kafka.topic1}")
+    private String topicName1;
+
+    @Value("${funny.kafka.topic2}")
+    private String topicName2;
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
-    public void produceMessage(String msg) {
-        this.kafkaTemplate.send(topicName, msg);
+    public void sendMessageTopic1(String msg) {
+        this.kafkaTemplate.send(topicName1, msg);
+    }
+
+    public void sendMessageTopic2(String msg) {
+        this.kafkaTemplate.send(topicName2, msg);
     }
 }

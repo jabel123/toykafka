@@ -8,4 +8,5 @@ spring:
 
 funny:
   kafka:
-    topic: mytopic
+    topic1: mytopic1
+    topic2: mytopic2
